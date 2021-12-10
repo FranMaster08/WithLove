@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'home'}) %>
+
+<body>
+  <%- include('partials/nav', {navtitle: 'Fran'}) %>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <section>
+    <div class="card">
+      <a href="movies/<%= movie.id %>">
+        <p><%= movie.id %></p>
+        <p><%= movie.title %></p>
+        <p><%= movie.rating %></p>
+      </a>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'home'}) %>
+
+<body>
+  <%- include('partials/nav', {navtitle: 'Fran'}) %>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <section>
+    <% data.forEach(function(actor){ %>
+    <div class="card">
+      <a href="movies/<%= actor.id %>">
+        <p><%= actor.id %></p>
+        <p><%= actor.title %></p>
+        <p><%= actor.rating %></p>
+      </a>
+
+    </div>
+    <% }); %>
+  </section>
+
+</body>
+
+</html>
